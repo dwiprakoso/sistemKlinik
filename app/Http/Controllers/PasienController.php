@@ -35,8 +35,8 @@ class PasienController extends Controller
         $request->validate([
             'nama' => 'required|string',
             'alamat' => 'required|string',
-            'no_ktp' => 'required|string',
-            'no_hp' => 'required|string',
+            'no_ktp' => 'required|string|max:1000',
+            'no_hp' => 'required|string|max:1000',
         ]);
 
         // Pasien diambil dari model
@@ -76,8 +76,8 @@ class PasienController extends Controller
         $request->validate([
             'nama' => 'required|string',
             'alamat' => 'required|string',
-            'no_ktp' => 'required|string',
-            'no_hp' => 'required|string',
+            'no_ktp' => 'required|string|max:1000',
+            'no_hp' => 'required|string|max:1000',
         ]);
 
         $pasien->update([

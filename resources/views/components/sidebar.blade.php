@@ -6,7 +6,7 @@
         <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-laugh-wink"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">BK-Faris</div>
+        <div class="sidebar-brand-text mx-3">Sistem Temu Dokter</div>
     </a>
 
     <!-- Divider -->
@@ -23,33 +23,33 @@
     <hr class="sidebar-divider">
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item active">
-        <a class="nav-link" href="/pasien" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+        <a class="nav-link" href="/pasien" aria-expanded="true"
             aria-controls="collapseTwo">
-            <i class="fas fa-fw fa-cog"></i>
+            <i class="fa-solid fa-bandage"></i>
             <span>Pasien</span>
         </a>
     </li>
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link" href="/dokter" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+        <a class="nav-link" href="/dokter" aria-expanded="true"
             aria-controls="collapseTwo">
-            <i class="fas fa-fw fa-cog"></i>
+            <i class="fa-solid fa-user-doctor"></i>
             <span>Dokter</span>
         </a>
     </li>
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link" href="/poli" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+        <a class="nav-link" href="/poli" aria-expanded="true"
             aria-controls="collapseTwo">
-            <i class="fas fa-fw fa-cog"></i>
+            <i class="fa-solid fa-house-chimney-medical"></i>
             <span>Poli</span>
         </a>
     </li>
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link" href="/obat" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+        <a class="nav-link" href="/obat" aria-expanded="true"
             aria-controls="collapseTwo">
-            <i class="fas fa-fw fa-cog"></i>
+            <i class="fa-solid fa-pills"></i>
             <span>Obat</span>
         </a>
     </li>

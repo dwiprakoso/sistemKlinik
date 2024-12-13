@@ -8,7 +8,7 @@
         <div class="card shadow mb-4">
             <div class="card-header py-3">
                 <a href="{{ url('/poli/create') }}" class="btn btn-info">
-                    Add Obat
+                    Tambah Poli
                 </a>
             </div>
             

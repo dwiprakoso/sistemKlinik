@@ -8,7 +8,7 @@
         <div class="card shadow mb-4">
             <div class="card-header py-3">
                 <a href="{{ url('/dokter/create') }}" class="btn btn-info">
-                    Add Dokter
+                    Tambah Dokter
                 </a>
             </div>
             

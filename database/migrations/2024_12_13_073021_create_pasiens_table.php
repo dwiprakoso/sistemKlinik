@@ -13,11 +13,10 @@ return new class extends Migration
     {
         Schema::create('pasiens', function (Blueprint $table) {
             $table->id();
-            // $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
             $table->string('nama');
             $table->string('alamat');
-            $table->integer('no_ktp');
-            $table->integer('no_hp');
+            $table->string('no_ktp');
+            $table->string('no_hp');
             $table->string('no_rm');
             $table->timestamps();
         });
