@@ -14,7 +14,9 @@ class PasienController extends Controller
     {
         // var = models function
         $pasiens = Pasien::paginate(5);
-        return view('pasien', compact('pasiens'));
+        return view('pasien', [
+            'pasiens' => $pasiens
+        ]);
     }
 
     /**
@@ -30,7 +32,7 @@ class PasienController extends Controller
      */
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
+        $request->validate([
             'nama' => 'required|string',
             'alamat' => 'required|string',
             'no_ktp' => 'required|string',
@@ -62,7 +64,8 @@ class PasienController extends Controller
      */
     public function edit(Pasien $pasien)
     {
-        //
+        
+        return view('form.editPasien', compact('pasien'));
     }
 
     /**
@@ -70,7 +73,21 @@ class PasienController extends Controller
      */
     public function update(Request $request, Pasien $pasien)
     {
-        //
+        $request->validate([
+            'nama' => 'required|string',
+            'alamat' => 'required|string',
+            'no_ktp' => 'required|string',
+            'no_hp' => 'required|string',
+        ]);
+
+        $pasien->update([
+            'nama' => $request->nama,
+            'alamat' => $request->alamat,
+            'no_ktp' => $request->no_ktp,
+            'no_hp' => $request->no_hp
+        ]);
+
+        return redirect('/pasien')->with('status', 'Pasien Updated Succesfully');
     }
 
     /**
@@ -78,6 +95,8 @@ class PasienController extends Controller
      */
     public function destroy(Pasien $pasien)
     {
-        //
+        $pasien->delete();
+
+        return redirect('/pasien')->with('status', 'Pasien deleted successfully.');
     }
 }

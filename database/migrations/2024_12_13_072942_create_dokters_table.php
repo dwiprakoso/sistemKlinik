@@ -14,8 +14,6 @@ return new class extends Migration
         Schema::create('dokters', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->string('email')->unique();
-            $table->string('password');
             $table->string('alamat');
             $table->integer('no_hp');
             $table->foreignId('id_poli')->constrained('polis')->cascadeOnDelete();

@@ -15,10 +15,14 @@ class Pasien extends Model
     protected static function booted()
     {
         static::creating(function ($pasien) {
+            $currentDate = now()->format('Ym');  // Format tahun dan bulan
+            $latestNoRm = self::where('no_rm', 'like', $currentDate . '%')->latest()->first();
+
+            // Menentukan ID berdasarkan yang terakhir, atau mulai dari 1 jika belum ada
             $latestId = self::max('id') + 1; // Ambil ID terbaru
-            $currentYear = now()->format('Y'); // Tahun sekarang
-            $currentMonth = now()->format('m'); // Bulan sekarang
-            $pasien->no_rm = "$currentYear" . "$currentMonth"-"$latestId";
+
+            // Menyusun no_rm dengan format 'tahunbulan-id'
+            $pasien->no_rm = $currentDate . '-' . str_pad($latestId, STR_PAD_LEFT);
         });
     }
 }
